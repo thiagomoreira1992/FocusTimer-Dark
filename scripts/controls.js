@@ -2,6 +2,8 @@ import Sounds from './sounds.js';
 
 const sounds = Sounds();
 
+const root = document.documentElement;
+
 export default function Controls({
     buttonPlay,
     buttonPause,
@@ -10,7 +12,9 @@ export default function Controls({
     buttonSound3,
     buttonSound4,
     displayMinutes,
-    timer
+    timer,
+    buttonDark,
+    buttonLight
 }) {
 
     function play() {
@@ -130,6 +134,27 @@ export default function Controls({
         sounds.coffe.volume= input;
         sounds.fireplace.volume= input;
     }
+
+    function lightTheme(){
+        buttonDark.classList.add('hide');
+        buttonLight.classList.remove('hide');
+        root.style.setProperty('--bg-color', '#fff')
+        root.style.setProperty('--bg-bt-color', '#e1e1e6')
+        root.style.setProperty('--fill-color', '#323238');
+        root.style.setProperty('--bg-bt-active',  '#02799D');
+        root.style.setProperty('--fill-active', '#FFFFFF');
+        root.style.setProperty('--fc-primary', '#323238');
+    }
+    function darkTheme(){
+        buttonDark.classList.remove('hide');
+        buttonLight.classList.add('hide');
+        root.style.setProperty('--bg-color', '#121214');
+        root.style.setProperty('--bg-bt-color', '#29292E');
+        root.style.setProperty('--fill-color', '#C4C4CC');
+        root.style.setProperty('--bg-bt-active',  '#0A3442');
+        root.style.setProperty('--fill-active', '#FFFFFF');
+        root.style.setProperty('--fc-primary', '#fff');
+    }
     
 
     return {
@@ -143,6 +168,8 @@ export default function Controls({
         sound2,
         sound3,
         sound4,
-        volumeSound1
+        volumeSound1,
+        lightTheme,
+        darkTheme
     }
 }
