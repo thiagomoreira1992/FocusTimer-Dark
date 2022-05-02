@@ -1,4 +1,11 @@
 import { displayMinutes, displaySeconds } from "./elements.js";
+import Sounds from './sounds.js'
+import Controls from "./controls.js";
+import { buttonPlay, buttonPause } from "./elements.js";
+
+const controls = Controls({buttonPlay, buttonPause})
+
+const sound = Sounds();
 
 export default function Timer({displayMinutes, displaySeconds}) {
 
@@ -28,7 +35,9 @@ export default function Timer({displayMinutes, displaySeconds}) {
 
             if(finished){
                 reset();
+                controls.resetControls();
                 updateDisplay();
+                sound.timeEnd();
                 return;
             }
 
