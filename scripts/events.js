@@ -8,7 +8,6 @@ import {
     buttonSound2,
     buttonSound3,
     buttonSound4,
-    rangeSound,
     buttonLight,
     buttonDark
 } from "./elements.js";
@@ -53,9 +52,27 @@ export default function Events({controls, timer}){
     buttonSound4[0].addEventListener('click', function () {
         controls.sound4();
     })
-    
-    rangeSound.addEventListener('input', () =>{
-        controls.volumeSound1(rangeSound.value)
+
+    buttonSound1[2].addEventListener('input', () =>{
+        console.log(buttonSound1[2].value)
+        controls.volumeSound1(buttonSound1[2].value);
+    })
+
+    buttonSound2[2].addEventListener('input', () =>{
+        console.log(buttonSound2[2].value)
+        controls.volumeSound2(buttonSound2[2].value);
+    })
+
+    buttonSound3[2].addEventListener('input', () =>{
+        controls.volumeSound3(buttonSound3[2].value);
+        console.log(buttonSound3[2].value)
+
+    })
+
+    buttonSound4[2].addEventListener('input', () =>{
+        controls.volumeSound4(buttonSound4[2].value);
+        console.log(buttonSound4[2].value)
+
     })
     
     buttonDark.addEventListener('click', () =>{

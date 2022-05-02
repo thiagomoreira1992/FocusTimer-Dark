@@ -17,6 +17,7 @@
 
 body {
     background: var(--bg-color);
+    transition: all 0.3s;
 }
 
 .hide {
@@ -90,10 +91,17 @@ main {
     align-items: center;
     width: clamp(3.2rem, 3rem + 2vw, 4.8rem);
     height: clamp(3.2rem, 3rem + 2vw, 4.8rem);
+    
 }
 
 .controls button path{
+    border-radius: 24px;
     fill: var(--fill-color);
+    transition: all 0.3s;
+}
+
+.controls button svg:hover path{
+    fill: var(--bg-bt-active)
 }
 
 .volume {
@@ -111,6 +119,7 @@ main {
     gap: clamp(1.8rem, 1.5rem + 3vw, 3.2rem);
     align-items: center;
     justify-content: center;
+    transition: all 0.3s;
 }
 .sounds div{
     background-color: var(--bg-bt-color);
@@ -122,6 +131,7 @@ main {
     height: clamp(4rem, 5rem + 10vw, 15rem);
     width: clamp(2rem, 3rem + 10vw, 14rem);
     border-radius: clamp(5px, 5px + 1vw, 24px);
+    transition: all 0.3s;
 }
 
 .sounds button {
@@ -135,7 +145,7 @@ main {
     border-radius: clamp(5px, 5px + 1vw, 24px);
     cursor: pointer;
     flex-direction: column;
-    
+    transition: all 0.3s;
     gap: 2rem;
 
 }

@@ -137,12 +137,20 @@ export default function Controls({
     }
 
     function volumeSound1(input){
-        sounds.forest.volume= input;
-        sounds.rain.volume= input;
-        sounds.coffe.volume= input;
-        sounds.fireplace.volume= input;
+        sounds.forest.volume= Number(input);
     }
 
+    function volumeSound2(input){
+        sounds.rain.volume=  Number(input);
+    }
+
+    function volumeSound3(input){
+        sounds.coffe.volume=  Number(input);
+    }
+    function volumeSound4(input){
+        sounds.fireplace.volume=  Number(input);
+    }
+    
     function lightTheme(){
         buttonDark.classList.add('hide');
         buttonLight.classList.remove('hide');
@@ -177,6 +185,9 @@ export default function Controls({
         sound3,
         sound4,
         volumeSound1,
+        volumeSound2,
+        volumeSound3,
+        volumeSound4,
         lightTheme,
         darkTheme
     }
