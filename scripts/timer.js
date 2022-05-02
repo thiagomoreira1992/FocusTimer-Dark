@@ -38,6 +38,7 @@ export default function Timer({displayMinutes, displaySeconds}) {
                 controls.resetControls();
                 updateDisplay();
                 sound.timeEnd();
+                navi
                 return;
             }
 

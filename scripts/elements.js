@@ -6,10 +6,11 @@ const buttonDecrement = document.querySelector('.decrement');
 const displayMinutes = document.querySelector('.minutes');
 const displaySeconds = document.querySelector('.seconds');
 
-const buttonSound1 = document.querySelector('.sound1');
-const buttonSound2 = document.querySelector('.sound2');
-const buttonSound3 = document.querySelector('.sound3');
-const buttonSound4 = document.querySelector('.sound4');
+const buttonSound1 = [document.querySelector('.sound1'), document.querySelector('.button-wrapper1')];
+const buttonSound2 = [document.querySelector('.sound2'), document.querySelector('.button-wrapper2')];
+const buttonSound3 = [document.querySelector('.sound3'), document.querySelector('.button-wrapper3')];
+const buttonSound4 = [document.querySelector('.sound4'), document.querySelector('.button-wrapper4')];
+
 
 const buttonLight = document.querySelector('.light');
 const buttonDark = document.querySelector('.dark');

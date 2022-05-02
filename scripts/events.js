@@ -38,19 +38,19 @@ export default function Events({controls, timer}){
         controls.decrement();
     })
     
-    buttonSound1.addEventListener('click', function () {
+    buttonSound1[0].addEventListener('click', function () {
         controls.sound1();
     })
     
-    buttonSound2.addEventListener('click', function () {
+    buttonSound2[0].addEventListener('click', function () {
         controls.sound2();
     })
     
-    buttonSound3.addEventListener('click', function () {
+    buttonSound3[0].addEventListener('click', function () {
         controls.sound3();
     })
     
-    buttonSound4.addEventListener('click', function () {
+    buttonSound4[0].addEventListener('click', function () {
         controls.sound4();
     })
     

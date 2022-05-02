@@ -66,7 +66,8 @@ export default function Controls({
         } else {
             sound = 1;
             resetSoundButton();
-            buttonSound1.classList.add('active');
+            buttonSound1[0].classList.add('active');
+            buttonSound1[1].classList.add('active');
             resetSounds();
             sounds.forest.play();
         }
@@ -80,7 +81,8 @@ export default function Controls({
         } else {
             sound = 2;
             resetSoundButton();
-            buttonSound2.classList.add('active');
+            buttonSound2[0].classList.add('active');
+            buttonSound2[1].classList.add('active');
             resetSounds();
             sounds.rain.play();
         }
@@ -94,7 +96,8 @@ export default function Controls({
         } else {
             sound = 3;
             resetSoundButton();
-            buttonSound3.classList.add('active');
+            buttonSound3[0].classList.add('active');
+            buttonSound3[1].classList.add('active');
             resetSounds();
             sounds.coffe.play();
         }
@@ -108,17 +111,22 @@ export default function Controls({
         } else {
             sound = 4;
             resetSoundButton();
-            buttonSound4.classList.add('active');
+            buttonSound4[0].classList.add('active');
+            buttonSound4[1].classList.add('active');
             resetSounds();
             sounds.fireplace.play();
         }
     }
 
     function resetSoundButton() {
-        buttonSound1.classList.remove('active')
-        buttonSound2.classList.remove('active')
-        buttonSound3.classList.remove('active')
-        buttonSound4.classList.remove('active')
+        buttonSound1[0].classList.remove('active')
+        buttonSound2[0].classList.remove('active')
+        buttonSound3[0].classList.remove('active')
+        buttonSound4[0].classList.remove('active')
+        buttonSound1[1].classList.remove('active');
+        buttonSound2[1].classList.remove('active')
+        buttonSound3[1].classList.remove('active')
+        buttonSound4[1].classList.remove('active')
     }
 
     function resetSounds(){
